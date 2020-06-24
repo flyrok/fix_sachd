@@ -21,7 +21,7 @@ def main():
             ''',
             epilog=""""
             e.g.
-            sac_codadur -f sac_data/*.sac 
+            fix_sachd -f sac_data/*.sac  -d norid:4026
             """
             )
 

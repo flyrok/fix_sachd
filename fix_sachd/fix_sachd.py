@@ -2,23 +2,16 @@
 Fix sac headers
 
 '''
-
 # standard system stuff
 from pathlib import Path
 import logging
 import sys
 
-# matplot lib stuff
-
-import numpy as np
 from obspy import UTCDateTime, Stream, read
-from obspy.signal.filter import envelope
-# mine
-#from hypoarc.hypoarc import hypoarc, Hpck
 
-#import warnings
-#warnings.filterwarnings("ignore") # this is to stop numpy depracate warning
-
+import warnings
+with warnings.catch_warnings():
+    warnings.filterwarnings('ignore','FutureWarning:')
 
 class fix_sachd(object):
     def __init__(self, list_sacs=None,head_dict=None,debug=0,logfile=None):
